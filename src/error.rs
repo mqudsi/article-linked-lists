@@ -16,7 +16,7 @@ impl fmt::Display for SchemaError {
 impl error::Error for SchemaError {}
 
 /// Error that may happen during input validation.
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub struct ValidationError {
     message: String,
     location: Vec<String>,

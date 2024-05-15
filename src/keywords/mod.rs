@@ -5,7 +5,6 @@ use crate::ValidationError;
 pub(crate) mod properties;
 pub(crate) mod type_;
 
-pub(crate) use properties::Properties;
 pub(crate) use type_::Type;
 
 pub(crate) trait Node {

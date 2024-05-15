@@ -18,12 +18,6 @@ pub(crate) enum Type {
     String,
 }
 
-impl Type {
-    pub(crate) fn boxed(self) -> Box<dyn Node> {
-        Box::new(self)
-    }
-}
-
 impl Node for Type {
     fn validate(&self, instance: &Value, level: u32) -> Result<(), ValidationError> {
         match (self, instance) {
